@@ -20,8 +20,10 @@
  * page styling and an app section for the specific display of the ShirtForm.
  */
 
-import './App.css';
+import React from 'react';
 import ShirtForm from "./components/ShirtForm";
+import DiscountHero from "./components/DiscountHero";
+import './App.css';
 
 function App() {
     return (
@@ -30,6 +32,7 @@ function App() {
                 <div className='gradient'/>
             </div>
             <div className='app'>
+                <DiscountHero />
                 <ShirtForm/>
             </div>
         </div>
