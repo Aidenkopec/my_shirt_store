@@ -1,8 +1,7 @@
 # Description
 
 Shirt Store Discounts is an application that calculates optimal discounts for purchases from a specific fashion
-collection. Built with React, Tailwind, and JavaScript, this application is designed to provide the best shopping
-experience, ensuring customers achieve the highest possible discount.
+collection. Built with React, Tailwind, and JavaScript, this application ensures customers achieve the highest possible discount.
 
 The application allows customers to select the quantity for each different shirt in
 the collection, automatically calculating the best discount available.
