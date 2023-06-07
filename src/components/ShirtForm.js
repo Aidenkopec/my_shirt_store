@@ -66,15 +66,14 @@ const ShirtForm = () => {
 
     // The component renders a form with five input fields for the number of each type of shirt, a "Calculate Total" button, and a message that displays the total cost.
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen ">
-            <h1 className="text-5xl font-bold mb-4">Shirt Store Discounts</h1>
-            <form className="space-y-4">
+        <div className="flex flex-col items-center justify-center mt-10 w-full  ">
+            <form className="space-y-4 justify-center items-center">
                 {shirtCounts.map((count, index) => (
                     <div key={index} className="flex items-center space-x-2">
                         <label className="text-lg">{`Shirt ${index + 1}:`}</label>
                         <input type="number" min="0" value={count}
                                onChange={(event) => handleShirtCountChange(index, event)}
-                               className="border-2 border-gray-200 rounded-md p-2"/>
+                               className="border-2 rounded-md p-2"/>
                     </div>
                 ))}
                 <button type="button" onClick={calculateTotal}
@@ -82,7 +81,7 @@ const ShirtForm = () => {
                     Calculate Total
                 </button>
             </form>
-            <p className="text-lg mt-4">{`Total Cost: $${totalCost.toFixed(2)}`}</p>
+            <p className=" font-inter font-medium text-m text-gray-700 text-lg mt-4">{`Total Cost: $${totalCost.toFixed(2)}`}</p>
         </div>
     );
 }
