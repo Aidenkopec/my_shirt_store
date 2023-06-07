@@ -1,6 +1,31 @@
+/**
+ * This is a React component representing a form for calculating the cost of a shirt order.
+ * It allows entering the number of each type of shirt, and it calculates the total cost
+ * based on the quantity of each shirt type and their applicable discounts.
+ *
+ * The component has two states: `shirtCounts` and `totalCost`.
+ * `shirtCounts` is an array of five integers, representing the quantity of each type of shirt.
+ * `totalCost` is a floating point number, representing the total cost of the order.
+ *
+ * @component
+ * @example
+ * return (
+ *   <ShirtForm />
+ * )
+ *
+ * @returns A form with five input fields for the number of each type of shirt, a "Calculate Total" button,
+ * and a message that displays the total cost. When the "Calculate Total" button is clicked,
+ * the total cost is calculated based on the entered shirt counts and the applicable discounts,
+ * and the total cost message is updated.
+ *
+ * Each input field is a number input field that accepts non-negative integers.
+ * When the value of an input field changes, the corresponding element of the `shirtCounts` array is updated.
+ *
+ * The "Calculate Total" button triggers the calculation of the total cost,
+ * which is done by the `calculateTotalCost` function, and then updates the `totalCost` state.
+ */
 import React, {useState} from 'react';
 
-// This component represents the form for entering the number of each type of shirt and calculating the total cost.
 const ShirtForm = () => {
     // shirtCounts represents the number of each type of shirt. It's an array of five numbers.
     const [shirtCounts, setShirtCounts] = useState([0, 0, 0, 0, 0]);
@@ -52,7 +77,8 @@ const ShirtForm = () => {
                                className="border-2 border-gray-200 rounded-md p-2"/>
                     </div>
                 ))}
-                <button type="button" onClick={calculateTotal} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <button type="button" onClick={calculateTotal}
+                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Calculate Total
                 </button>
             </form>
